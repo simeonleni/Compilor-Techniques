@@ -20,3 +20,30 @@ Inside this repository, you'll discover:
 Whether you're a fellow student, an educator, or a curious enthusiast, you're welcome to explore the code, learn from the implementations, and contribute to the repository. Feel free to fork the repository, submit pull requests, or open issues for discussions and feedback.
 
 Let's collaborate and advance our understanding of compiler techniques together!
+
+<div style="border: 1px solid #ddd; padding: 1em; margin: 1em 0;">
+
+## Lab05_b: Error Detection in Compiler Input Strings
+
+**Objective:**
+
+Enhance my Lab04_A program to identify and report syntax and semantic errors in compiler input strings based on a specific grammar.
+
+**Description:**
+
+This assignment involves modifying your existing Lab04_A code to detect errors in input strings. The program will:
+
+- Accept strings containing only letters (A-Z, a-z) and operators (+, -, \*, /).
+- Identify and report two types of errors:
+
+  - Semantic errors:
+
+    - Consecutive operators or identifiers (e.g., AA, ++)
+    - Strings lacking an operator (e.g., ABC)
+
+  - Syntax errors:
+
+        - Presence of digits (0-9)
+        - Usage of special characters other than +, -, \*, /
+
+</div>

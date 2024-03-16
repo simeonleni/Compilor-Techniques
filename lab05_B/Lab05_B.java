@@ -4,7 +4,7 @@ public class Lab05_B {
 
     public static void main(String[] args) {
 
-        String data = "8-3/2";
+        String data = "E-D+I*H/B";
         List<String> tokens = lexicalAnalysis(data);
 
         ArrayList<String> syntaxErrors = syntaxAnalysis(tokens);
@@ -37,14 +37,19 @@ public class Lab05_B {
                 System.out.println(
                         "SYNTAX ERROR: Numbers 0 to 9 are not allowed in any part of the token. Token: " + token);
                 errorCodes.add("S001");
+                // Don't print the token after error message
+                continue;
             }
 
             if (!token.matches("[A-Za-z+\\-*/]+")) {
                 System.out.println("SYNTAX ERROR: Only letters, '+', '-', '*', and '/' are allowed. Token: " + token);
                 errorCodes.add("S002");
+                // Don't print the token after error message
+                continue;
             }
-            System.out.println(token);
 
+            // Only print the token if no errors were found
+            System.out.println(token);
         }
 
         return errorCodes;
