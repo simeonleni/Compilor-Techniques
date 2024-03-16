@@ -21,9 +21,11 @@ Whether you're a fellow student, an educator, or a curious enthusiast, you're we
 
 Let's collaborate and advance our understanding of compiler techniques together!
 
-<div style="border: 1px solid #ddd; padding: 1em; margin: 1em 0;">
+---
 
-## Lab05_b: Error Detection in Compiler Input Strings
+<div style="background-color: #f0f0f0; padding: 1em; border-radius: 5px;">
+
+## Lab05_B: Error Detection in Compiler Input Strings
 
 **Objective:**
 
@@ -42,8 +44,9 @@ This assignment involves modifying your existing Lab04_A code to detect errors i
     - Strings lacking an operator (e.g., ABC)
 
   - Syntax errors:
-
-        - Presence of digits (0-9)
-        - Usage of special characters other than +, -, \*, /
+    - Presence of digits (0-9)
+    - Usage of special characters other than +, -, \*, /
 
 </div>
+
+---
