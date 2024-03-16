@@ -21,11 +21,9 @@ Whether you're a fellow student, an educator, or a curious enthusiast, you're we
 
 Let's collaborate and advance our understanding of compiler techniques together!
 
-
-
 ---
 
-## Lab 5
+[Lab 5](https://github.com/simeonleni/compilerTechniques/tree/main/lab05_B)
 
 <details>
 <summary style="background-color: #f0f0f0; padding: 0.5em;">Lab05_B: Error Detection in Compiler Input Strings</summary>
@@ -53,4 +51,3 @@ This assignment involves modifying your existing Lab04_A code to detect errors i
 </details>
 
 ---
-
