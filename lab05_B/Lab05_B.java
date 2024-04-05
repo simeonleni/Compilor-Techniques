@@ -4,7 +4,7 @@ public class Lab05_B {
 
     public static void main(String[] args) {
 
-        String data = "E-D+I*H/B";
+        String data = "E-Db";
         List<String> tokens = lexicalAnalysis(data);
 
         ArrayList<String> syntaxErrors = syntaxAnalysis(tokens);
@@ -44,11 +44,9 @@ public class Lab05_B {
             if (!token.matches("[A-Za-z+\\-*/]+")) {
                 System.out.println("SYNTAX ERROR: Only letters, '+', '-', '*', and '/' are allowed. Token: " + token);
                 errorCodes.add("S002");
-                // Don't print the token after error message
                 continue;
             }
 
-            // Only print the token if no errors were found
             System.out.println(token);
         }
 
