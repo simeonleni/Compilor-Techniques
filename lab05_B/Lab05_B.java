@@ -3,15 +3,26 @@ import java.util.*;
 public class Lab05_B {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        String data = "E-Db";
-        List<String> tokens = lexicalAnalysis(data);
+        while (true) {
+            System.out.print("Input: ");
+            String data = scanner.nextLine();
 
-        ArrayList<String> syntaxErrors = syntaxAnalysis(tokens);
-        System.out.println("\nSyntax Errors: " + syntaxErrors);
+            if (data.equals("99")) {
+                break;
+            }
 
-        ArrayList<String> semanticErrors = semanticAnalysis(tokens);
-        System.out.println("\nSemantic Errors: " + semanticErrors);
+            List<String> tokens = lexicalAnalysis(data);
+
+            ArrayList<String> syntaxErrors = syntaxAnalysis(tokens);
+            System.out.println("\nSyntax Errors: " + syntaxErrors);
+
+            ArrayList<String> semanticErrors = semanticAnalysis(tokens);
+            System.out.println("\nSemantic Errors: " + semanticErrors);
+        }
+
+        scanner.close();
     }
 
     private static List<String> lexicalAnalysis(String data) {
