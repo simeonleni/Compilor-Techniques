@@ -16,10 +16,8 @@ public class Lab05_B {
             List<String> tokens = lexicalAnalysis(data);
 
             ArrayList<String> syntaxErrors = syntaxAnalysis(tokens);
-            System.out.println("\nSyntax Errors: " + syntaxErrors);
 
             ArrayList<String> semanticErrors = semanticAnalysis(tokens);
-            System.out.println("\nSemantic Errors: " + semanticErrors);
         }
 
         scanner.close();
@@ -42,27 +40,34 @@ public class Lab05_B {
 
     private static ArrayList<String> syntaxAnalysis(List<String> values) {
         ArrayList<String> errorCodes = new ArrayList<>();
-
-        for (String token : values) {
+    
+        for (int i = 0; i < values.size(); i++) {
+            String token = values.get(i);
+    
             if (token.matches(".*\\d+.*")) {
-                System.out.println(
-                        "SYNTAX ERROR: Numbers 0 to 9 are not allowed in any part of the token. Token: " + token);
+                System.out.println("SYNTAX ERROR: Numbers 0 to 9 are not allowed in any part of the token. Token: " + token);
                 errorCodes.add("S001");
-                // Don't print the token after error message
                 continue;
             }
-
+    
             if (!token.matches("[A-Za-z+\\-*/]+")) {
                 System.out.println("SYNTAX ERROR: Only letters, '+', '-', '*', and '/' are allowed. Token: " + token);
                 errorCodes.add("S002");
                 continue;
             }
-
-            System.out.println(token);
+    
+            // Check if the token is an operator or an identifier
+            String tokenType = token.matches("[+\\-*/]") ? "Operator" : "Identifier";
+            
+            // Print the token along with its type
+            System.out.println("TOKEN#" + (i + 1) + " " + token + " " + tokenType);
         }
-
+    
+        System.out.println("Stage 1 Complete");
+    
         return errorCodes;
     }
+    
 
     private static ArrayList<String> semanticAnalysis(List<String> tokens) {
         ArrayList<String> errorCodes = new ArrayList<>();
